@@ -1,0 +1,15 @@
+##Instructions for running the MODFLOW Visualization Script##
+
+1) Ensure Python 3+ is downloaded on your copmuter.
+
+2) Copy the python script - "MODFLOW_visuals_script.py" -  and paste into the relevant directory
+
+3) Open "MODFLOW_visuals_script.py" from the appropriate directory
+
+3) Update the script: a) line 17 re: dataset filepath; b) line 28 re: refDate; and c) line 29 re: maxDate
+
+4) Save "MODFLOW_visuals_script.py" in the appropriate directory and close the file.
+
+5) Run "MODFLOW_visuals_script.py" via command shell/linux shell/linux with it set to the appropriate directory
+
+6) "MODFLOW_visuals_script.py" will output appropriate folders and files (this may take 5-20 minutes)
