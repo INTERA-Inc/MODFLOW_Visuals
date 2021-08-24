@@ -13,9 +13,9 @@ import matplotlib as mpl
 import os
 import math
 
-#import relevant .xlsx file; create a dataframe
-file_path = r'./l210621trh_S1_targets.csv'
-df_raw = pd.read_csv(file_path)
+#import relevant .xlsx or .csv file; create a dataframe
+file_path = r'./l210621trh_S1_targets.csv'   #file_path should be adjusted for each the specified input dataset
+df_raw = pd.read_csv(file_path)              #determine if pd.read_csv() or pd.read_excel() required
 reducer = len(df_raw) -13
 df = df_raw[:reducer]
 
@@ -25,8 +25,8 @@ os.mkdir("ScatterPlots")
 os.mkdir("Head_Vs_Time_3x2")
 
 #define a reference date; convert to a "Date" column
-refDate = dt(1972, 6, 1)
-maxDate = dt(2021,6,1)
+refDate = dt(1972, 6, 1)                    #determine specified reference date
+maxDate = dt(2021,6,1)                      #determine specified maximum date
 
 #add column "Date" relative to days past refDate
 df['Date'] = refDate + pd.TimedeltaIndex(df['Time'], unit='D')
